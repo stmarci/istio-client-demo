@@ -5,7 +5,7 @@ FROM openjdk:17-jdk-slim
 WORKDIR /app
 
 # Másoljuk a jar fájlt a konténerbe
-COPY build/libs/istio-service-demo-0.0.1-SNAPSHOT.jar app.jar
+COPY build/libs/istio-client-demo-0.0.1-SNAPSHOT.jar app.jar
 
 # Exponáljuk a 8080-as portot
 EXPOSE 8080

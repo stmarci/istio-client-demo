@@ -1,10 +1,7 @@
 package com.example.istioclientdemo;
 
-import jakarta.ws.rs.GET;
-import jakarta.ws.rs.Path;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
@@ -22,7 +19,7 @@ public class ClientController {
     public void initiate() {
         final Runnable poller = () -> {
             ResponseEntity<String> responseEntity =
-                    restTemplate.getForEntity("http://istio-service-demo/demo", String.class);
+                    restTemplate.getForEntity("http://http-istio-service-demo/demo", String.class);
 
             System.out.println("Response from istio-service-demo: " + responseEntity.getBody());
         };

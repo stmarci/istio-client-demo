@@ -1,5 +1,5 @@
 apiVersion: v2
-name: istio-service-demo
+name: istio-client-demo
 description: A Helm chart for Kubernetes Client Operator with fabric8
 version: 0.1.0
 appVersion: "1.0"

@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: http-kubernetes-example
+  name: http-istio-client-demo
   labels:
     {{- include "kubernetes-client.labels" . | nindent 4 }}
 

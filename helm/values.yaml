@@ -1,15 +1,16 @@
 replicaCount: 1
 
 image:
-  repository: localhost:5000/istio-service-demo
+  repository: localhost:5000/istio-client-demo
   tag: latest
   pullPolicy: IfNotPresent
 
-serviceAccount:
-  create: true
-  name: istio-service-demo
 rbac:
   create: true
+
+serviceAccount:
+  create: true
+  name: istio-client-demo
 
 service:
   type: ClusterIP
