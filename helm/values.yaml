@@ -1,0 +1,26 @@
+replicaCount: 1
+
+image:
+  repository: localhost:5000/istio-service-demo
+  tag: latest
+  pullPolicy: IfNotPresent
+
+serviceAccount:
+  create: true
+  name: istio-service-demo
+rbac:
+  create: true
+
+service:
+  type: ClusterIP
+  port: 80
+
+resources: {}
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
+
+version: "v1"
